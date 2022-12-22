@@ -61,24 +61,21 @@
 </body>
 <script>
     let flag = false;
-    // let count = 1;
     let left = document.getElementById("left")
     let right = document.getElementById("right")
     function closeLeft() {
-        console.log("Globle Working");
+        console.log("Globle Working", flag);
         // left.style.border = "10px solid yellow"
         left.style.display = "none";
         right.style.width = "100%";
         if (flag) {
             left.style.display = "inline";
-            console.log("local working");
-            // right.style.width = "100%";
+            console.log("local working", flag);
             flag = false;
+        } else {
+            flag = true;
         }
-        // count++;
-
     }
-    flag = true;
 
 
 </script>
