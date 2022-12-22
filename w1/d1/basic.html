@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            height: 300px;
+            width: 90%;
+            display: flex;
+            border: 2px solid blue;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .left {
+            height: 200px;
+            width: 30%;
+            border: 2px solid red;
+        }
+
+        .right {
+            height: 200px;
+            width: 60%;
+            border: 2px solid red;
+        }
+
+        button {
+            height: 40px;
+            width: 50px;
+            margin: 5px;
+        }
+
+        hr {
+            height: 50px;
+            width: 4px;
+            margin: 5px;
+            cursor: pointer;
+            border-left: 2px dashed black;
+            border-right: 2px dashed black;
+            border-top: 0px;
+            border-bottom: 0px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div id="left" class="left"></div>
+        <!-- <button onclick="closeLeft()">shift </button> -->
+        <hr onclick="closeLeft()" />
+        <div id="right" class="right"></div>
+    </div>
+
+
+</body>
+<script>
+    let flag = false;
+    // let count = 1;
+    let left = document.getElementById("left")
+    let right = document.getElementById("right")
+    function closeLeft() {
+        console.log("Globle Working");
+        // left.style.border = "10px solid yellow"
+        left.style.display = "none";
+        right.style.width = "100%";
+        if (flag) {
+            left.style.display = "inline";
+            console.log("local working");
+            // right.style.width = "100%";
+            flag = false;
+        }
+        // count++;
+
+    }
+    flag = true;
+
+
+</script>
+
+</html>

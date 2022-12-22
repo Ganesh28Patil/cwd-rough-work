@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show me</title>
+    <style>
+        * {
+            padding: 25px;
+        }
+
+        #showContainer {
+            display: none;
+            /* border: 2px solid red; */
+            height: 200px;
+            width: 20%;
+        }
+
+        #dataBox {
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, a.</h1>
+
+    <div id="showContainer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium corrupti
+        expedita. Accusamus expedita nostrum numquam exercitationem pariatur saepe consequatur debitis veniam doloribus
+        laudantium culpa iure praesentium dolorem maxime consequuntur fuga magni, consectetur accusantium id! Ut,
+        quaerat fugit quae laboriosam deleniti voluptatibus obcaecati! Magni cum neque incidunt!
+    </div>
+    <!-- <hr /> -->
+
+    <div id="dataBox">
+        <dd>Sr 1</dd>
+        <dd>data statement </dd>
+        <button onclick="addComponent()">trip</button>
+    </div>
+</body>
+<script>
+    let newContainer = document.getElementById("showContainer");
+    let dataRef = document.getElementById("dataBox");
+    function addComponent() {
+        newContainer.style.display = "inline";
+        dataRef.style.display = "none"
+    }
+</script>
+
+</html>
